@@ -12,11 +12,11 @@ pipeline {
       steps {
         parallel(
           First: {
-            echo "First Paralel task"
+            echo "First Paralel task(1)"
             sh 'scripts/./hello.sh'
           },
           Second: {
-            echo "Second Paralel task"
+            echo "Second Paralel task(2)"
             sh 'scripts/./bye.sh'
           }
         )
