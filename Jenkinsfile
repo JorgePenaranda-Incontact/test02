@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('Run Scripts') {
       steps {
-        sh '''pwd
-ls'''
+        sh '''/scripts/./hello.sh
+/scripts/./bye.sh'''
       }
     }
   }
