@@ -11,6 +11,10 @@ pipeline {
     stage('Run Scripts(Paralel)') {
       steps {
         parallel(
+          Perms: {
+            echo "Set permissions"
+            sh 'chmod -R +x scripts/'
+          },
           First: {
             echo "First Paralel task(001)"
             sh 'scripts/./hello.sh'
