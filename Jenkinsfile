@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('Download(consecutively)') {
       steps {
-        sh 'scripts/./hello.sh'
-        sh 'scripts/./bye.sh'
+        sh 'scripts/./download.sh'
+        sh 'scripts/./download2.sh'
       }
     }
     stage('Run Scripts(Paralel)') {
