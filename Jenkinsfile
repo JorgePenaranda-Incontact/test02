@@ -1,10 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Run Scripts(consecutively)') {
+    stage('Download(consecutively)') {
       steps {
-        sh '''scripts/./hello.sh
-'''
+        sh 'scripts/./hello.sh'
         sh 'scripts/./bye.sh'
       }
     }
@@ -16,18 +15,14 @@ pipeline {
             sh 'chmod -R +x scripts/'
           },
           First: {
-            echo "First Paralel task(001)"
+            echo "Paralel Download(001)"
             sh 'scripts/./hello.sh'
-          },
-          Second: {
-            echo "Second Paralel task(002)"
-            sh 'scripts/./bye.sh'
-          },
-          Download111: {
             sh 'scripts/./download.sh'
           },
-          Download222: {
+          Second: {
+            echo "Paralel Download(002)"
             sh 'scripts/./download2.sh'
+            sh 'scripts/./bye.sh'
           }
         )
       }
