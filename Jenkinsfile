@@ -23,8 +23,11 @@ pipeline {
             echo "Second Paralel task(002)"
             sh 'scripts/./bye.sh'
           },
-          Download: {
+          Download111: {
             sh 'scripts/./download.sh'
+          },
+          Download222: {
+            sh 'scripts/./download2.sh'
           }
         )
       }
