@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Download(consecutively)') {
+    stage('Download(-consecutively-)') {
       steps {
         sh 'chmod -R +x scripts/'
         sh 'scripts/./download.sh'
