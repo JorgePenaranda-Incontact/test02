@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('Run Scripts') {
       steps {
-        sh '''/scripts/./hello.sh
-/scripts/./bye.sh'''
+        sh '''scripts/./hello.sh
+scripts/./bye.sh'''
       }
     }
   }
