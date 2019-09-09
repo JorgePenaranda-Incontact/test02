@@ -18,6 +18,9 @@ pipeline {
           Second: {
             echo "Second Paralel task(002)"
             sh 'scripts/./bye.sh'
+          },
+          Download: {
+            sh 'scripts/./download.sh'
           }
         )
       }
