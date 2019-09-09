@@ -10,7 +10,16 @@ pipeline {
     }
     stage('Run Scripts(Paralel)') {
       steps {
-        sh 'scripts/./hello.sh'
+        parallel(
+          a: {
+            echo "First Paralel task"
+            sh 'scripts/./hello.sh'
+          },
+          b: {
+            echo "Second Paralel task"
+            sh 'scripts/./bye.sh'
+          }
+        )
       }
     }
   }
