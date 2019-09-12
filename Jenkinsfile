@@ -16,12 +16,12 @@ pipeline {
             sh 'chmod -R +x scripts/'
           },
           First: {
-            echo "Paralel Download(0.1)"
+            echo "Paralel Download(0.01)"
             sh 'scripts/./hello.sh'
             sh 'scripts/./download.sh'
           },
           Second: {
-            echo "Paralel Download(0.2)"
+            echo "Paralel Download(0.02)"
             sh 'scripts/./download2.sh'
             sh 'scripts/./bye.sh'
           }
