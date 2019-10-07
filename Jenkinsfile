@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Download(consecutively)') {
       steps {
-        //sh 'chmod -R +x scripts/'
+        sh 'chmod -R +x scripts/'
         //sh 'scripts/./download.sh'
         //sh 'scripts/./download2.sh'
       }
