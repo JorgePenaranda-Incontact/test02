@@ -4,7 +4,7 @@ pipeline {
     stage('Download(consecutively)') {
       steps {
         sh 'fail.step'
-        sh 'chmod -R +x scripts/'
+        sh 'chmod -R +x scripts111/'
         //sh 'scripts/./download.sh'
         //sh 'scripts/./download2.sh'
       }
@@ -28,14 +28,6 @@ pipeline {
           }
         )
       }
-    }
-  }
-  post {
-    always {
-      echo "I will always execute this!"
-    }
-    failure {
-      echo "FAILUREEEE"
     }
   }
 }
